@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+$c-lightCyan: hsl(193, 38%, 86%);
+$c-neonGreen: hsl(150, 100%, 66%);
+$c-grayishBlue: hsl(217, 19%, 38%);
+$c-darkGrayish: hsl(217, 19%, 24%);
+$c-darkBlue: hsl(218, 23%, 16%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: $c-darkBlue;
+}
+body {
+  font-family: "Manrope";
+}
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .advice {
+  max-width: 550px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  background-color: $c-darkGrayish;
+  color: $c-lightCyan;
+  padding: 50px;
+  padding-bottom: 60px;
+  margin: 25px;
+  border-radius: 15px;
+  text-align: center;
+  gap: 25px;
+}
+main .advice::after {
+  content: "";
+  height: 50px;
+  width: 100%;
+  background-image: url("../public/img/pattern-divider-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 35%;
+}
+main .advice small {
+  color: $c-neonGreen;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+main .advice h2 {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+main .advice .randomizer {
+  display: flex;
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  bottom: -33px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 1000px;
+  background-color: $c-neonGreen;
+  color: $c-darkBlue;
+  cursor: pointer;
+  z-index: 200;
+
+  transition: box-shadow 0.15s ease-out;
+}
+
+main .advice .randomizer:hover {
+  box-shadow: 0px 0px 15px $c-neonGreen;
+}
+
+main .advice .randomizer::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  background-image: url("../public/img/icon-dice.svg");
+  background-size: 100%;
+}
+
+footer {
+}
